@@ -13,7 +13,6 @@ export class PorPaisComponent implements OnInit {
   termino: string = '';
   hayError: boolean = false;
 
-
   constructor( private paisService: PaisService ) { }
 
   ngOnInit(): void { }
@@ -27,6 +26,12 @@ export class PorPaisComponent implements OnInit {
       this.hayError = true;
       this.paises = []
     });
+  }
+
+  sugerencias(termino: string) {
+    this.hayError = false;
+    // console.log(termino)
+    // TODO crear sigerencias
   }
 
 }
